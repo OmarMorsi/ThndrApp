@@ -26,12 +26,10 @@ const Tickers: React.FC = () => {
     setLoading(true);
     try {
       const data = await getTickers(search);
-      console.log('Tickers Data:', data);
 
       if (data.results && Array.isArray(data.results)) {
         setTickers(data.results);
         setError(null);
-        console.log(data);
       } else {
         setTickers([]);
         setError('No tickers found');

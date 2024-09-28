@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     padding: 10,
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    borderRadius: 10,
+    borderRadius: 30,
     backgroundColor: colors.lightColor,
   },
 

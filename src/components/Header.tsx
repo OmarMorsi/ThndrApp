@@ -16,7 +16,6 @@ const Header: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    paddingBottom: 10,
     paddingLeft: 10,
     backgroundColor: colors.darkBlue2,
     flexDirection: 'row',

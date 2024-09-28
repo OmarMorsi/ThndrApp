@@ -11,26 +11,22 @@ function App(): React.JSX.Element {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsSplashVisible(false); // Hide splash screen after 3 seconds
-    }, 3000); // Adjust the time as needed
-
-    return () => clearTimeout(timer); // Clear the timer on component unmount
+      setIsSplashVisible(false);
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <View style={styles.outerContainer}>
-      <SafeAreaView style={styles.safeArea}>
-        {isSplashVisible ? (
-          <SplashScreen />
-        ) : (
-          <>
-            <Header />
-            <ScrollView contentContainerStyle={styles.scrollView}>
-              <Tickers />
-            </ScrollView>
-          </>
-        )}
-      </SafeAreaView>
+      <View style={styles.headerSpacing}></View>
+      {isSplashVisible ? (
+        <SplashScreen />
+      ) : (
+        <>
+          <Header />
+          <Tickers />
+        </>
+      )}
     </View>
   );
 }
@@ -38,17 +34,11 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   outerContainer: {
     flex: 1,
-    backgroundColor: colors.darkBlue2,
-  },
-  safeArea: {
-    flex: 1,
-    backgroundColor: colors.darkBlue2,
-  },
-  scrollView: {
     backgroundColor: colors.darkBlue,
-    alignItems: 'center',
-    flexGrow: 1,
-    minHeight: '100%',
+  },
+  headerSpacing: {
+    paddingBottom: 40,
+    backgroundColor: colors.darkBlue2,
   },
 });
 

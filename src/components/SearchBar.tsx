@@ -36,12 +36,13 @@ const SearchBar: React.FC<SearchBarProps> = ({
 const styles = StyleSheet.create({
   container: {
     margin: 20,
-    width: 300,
+    width: 330,
     paddingHorizontal: 20,
     borderRadius: 20,
     alignSelf: 'center',
-    borderWidth: 2,
-    borderColor: colors.lightColor,
+    borderWidth: 0.2,
+    borderColor: colors.darkBlue2,
+    backgroundColor: colors.lightColor,
   },
   input: {
     padding: 10,
